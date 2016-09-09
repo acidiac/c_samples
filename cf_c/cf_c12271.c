@@ -12,25 +12,27 @@
 
 /*
  * !!Check the char input as string
+ * this kind of works but its a super hacky thing
+ * need to have a better way to deal with the inputs and be able to take spaces
  */
 
 int main(){
-	char name, add_apts, add_street, add_city;
+	char name[25], add_apts[150], add_street[150], add_city[75];
 	int age;
 	printf("your name please: \n");
-	scanf("%c", &name);
+	scanf("%s", name);
 	printf("your age:\n");
 	scanf("%d", &age);
 	printf("Apartment Name and number: \n");
-	scanf("%c", &add_apts);
+	scanf("%s", add_apts);
 	printf("Street: \n");
-	scanf("%c", &add_street);
+	scanf("%s", add_street);
 	printf("city: \n");
-	scanf("%c", &add_city);
+	scanf("%s", add_city);
 	// printing out the details
-	printf("Hello %c, your age is %d\n", name, age);
+	printf("Hello %s, your age is %d\n", name, age);
 	printf("your address:\n");
 	printf("------------------------\n");
-	printf("%c,\n%c,\n%c\n", add_apts, add_street, add_city);
+	printf("%s,\n%s,\n%s\n", add_apts, add_street, add_city);
 	return 0;
 }
